@@ -7,6 +7,7 @@ const testReporter = {
 
 function create() {
 	return new Sola({
+		redact: [['password']],
 		reporters: [testReporter],
 	})
 }
@@ -62,4 +63,17 @@ describe('when set a level', () => {
 		fooSola.level = 2
 		expect(fooSola.getLevel()).toBe(2)
 	})
+})
+
+it('should redact out the given paths', () => {
+	const sola = create()
+	sola.log({ password: 1 })
+
+	expect(testReporter.log).toHaveBeenCalledOnce()
+	expect(testReporter.log).toHaveBeenCalledWith(expect.objectContaining({
+		type: 'log',
+		tag: '',
+		time: expect.anything(),
+		args: expect.arrayContaining([expect.objectContaining({ password: '****' })]),
+	}))
 })

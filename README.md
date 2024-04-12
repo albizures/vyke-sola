@@ -16,11 +16,11 @@ Core sola class
 ```ts
 const sola = new Sola({ tag: 'my-app' })
 
-sola.log('hello sola'); // <- my-app hello sola
+sola.log('hello sola') // <- my-app hello sola
 
 const customTag = sola.withTag('mytag')
 
-customTag.log('hello sola'); // <- my-app:mytag hello sola
+customTag.log('hello sola') // <- my-app:mytag hello sola
 ```
 
 ## Others vyke projects
