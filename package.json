@@ -1,7 +1,7 @@
 {
 	"name": "@vyke/sola",
 	"type": "module",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "Simple and small logger for any Javascript environment",
 	"author": "Jose Albizures <jose@albizures.com> (https://albizures.com/)",
 	"license": "MIT",
