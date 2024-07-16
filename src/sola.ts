@@ -77,6 +77,10 @@ export class Sola {
 		this.#logType('debug', args)
 	}
 
+	info(...args: Array<unknown>) {
+		this.#logType('info', args)
+	}
+
 	getLevel(): number {
 		const { level } = this
 		if (typeof level === 'number') {
@@ -87,7 +91,7 @@ export class Sola {
 		return this.parent?.getLevel() ?? 3
 	}
 
-	withTag(tag: string) {
+	withTag(tag: string): Sola {
 		return new Sola({
 			tag: this.tag ? `${this.tag}:${tag}` : `${tag}`,
 			parent: this,

@@ -5,12 +5,14 @@ export class Basic implements Reporter {
 	log(data: LogData) {
 		const { type, tag, args } = data
 
+		// in case there is a tag, we prepend it to the args
+		const params = tag ? [tag, ...args] : args
 		if (type in console) {
 			// @ts-expect-error type can't index console
-			console[type](tag, ...args)
+			console[type](...params)
 		}
 		else {
-			console.log(tag, ...args)
+			console.log(...params)
 		}
 	}
 }

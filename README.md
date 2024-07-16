@@ -4,6 +4,8 @@
 	</h1>
 </div>
 
+Simple and small logger for any Javascript environment
+
 ## Installation
 ```sh
 npm i @vyke/sola
