@@ -1,0 +1,8 @@
+{
+	"name": "@vyke/sola",
+	"version": "0.0.6",
+	"exports": {
+		".": "./src/index.ts",
+		"./reporters": "./src/reporters/basic.ts"
+	}
+}

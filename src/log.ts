@@ -1,4 +1,3 @@
-// eslint-disable-next-line ts/ban-types
 export type LogLevel = 0 | 1 | 2 | 3 | 4 | 5 | (number & {})
 
 export const LogTypes = {
@@ -15,7 +14,6 @@ export const LogTypes = {
 	fail: 3,
 	ready: 3,
 	start: 3,
-	box: 3,
 
 	debug: 4,
 
